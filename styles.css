@@ -1,0 +1,168 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 18px
+
+### Font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 300, 400, 600 */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    
+    /* Primary */
+
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+
+    --blue-main-bg: hsl(217, 54%, 11%);
+    --blue-card-bg: hsl(216, 50%, 16%);
+    --blue-line: hsl(215, 32%, 27%);
+    --white: 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--blue-main-bg);
+    color: hsl(0, 0%, 100%, 85%);
+    padding: 20px;
+}
+
+.container {
+    padding: 20px;
+    background-color: var(--blue-card-bg);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.container .image {
+    position: relative;
+}
+
+.container .image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 50%, 60%);
+    width: 100%;
+    height: calc(100% - 5px);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.container .image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.container .image div img {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img {
+    max-width: 100%;
+}
+
+.container h2 {
+    font-weight: 600;
+    color: var(--white);
+    margin: 15px 10px 10px 0;
+}
+
+.container h2:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.container ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--white);
+}
+
+.container ul li:first-child {
+    color: var(--cyan);
+}
+
+p {
+    font-weight: 300;
+}
+
+.container ul li {
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.container ul li img {
+    margin-right: 10px;
+}
+
+.container .creation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 0;
+}
+
+.container .creation img {
+    width: 55px;
+    border: 1.5px solid var(--white);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.container .creation p span {
+    color: var(--white);
+    font-weight: 400;
+}
+
+.container .creation p span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 15px; 
+    text-align: center; 
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 500px) {
+    .container {
+        width: 450px;
+        margin: 0 auto 10px auto;
+    }
+}
